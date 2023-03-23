@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{index}">
+<head>
+    <meta charset="UTF-8">
+    <title>Staff Attendance User Management</title>
+    <link rel="stylesheet" layout:fragment="style" th:href="@{/css/user.css}">
+
+</head>
+<body>
+<div class="wrapper" layout:fragment="content">
+    <div class="content-wrapper">
+        <section class="content-header mt-5">
+            <h1> Add New User</h1>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#">
+                        <i class="fa fa-dashboard"></i> Home
+                    </a>
+                </li>
+                <li class="breadcrumb-item"> User Management</li>
+                <li th:if="${action != 'update'}" class="breadcrumb-item active">Add</li>
+
+            </ol>
+        </section>
+        <section class="content">
+            <div class="card card-info">
+                <div class="card-body">
+                    <div class="row">
+
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <div class="input-group">
+                                    <input type="text" name="fullName" class="form-control" th:value="${user != null ? user.fullName : ''}"
+                                           placeholder="Enter Full Name">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fas fa-square"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>User Name</label>
+                                <div class="input-group">
+                                    <input type="text" name="username" class="form-control" th:value="${user != null ? user.username : ''}"
+                                           placeholder="Enter User Name">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Password</label>
+                                <div class="input-group">
+                                    <input type="password" name="pwd" class="form-control" th:value="${user != null ? user.password : ''}" placeholder="Enter Password">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Confirm Password</label>
+                                <div class="input-group">
+                                    <input type="password" name="confPwd" class="form-control"  th:value="${user != null ? user.password : ''}"
+                                           placeholder="Enter Confirm Password">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="submit" th:if="${action != 'update'}" class="btn btn-primary" id="create">Save</button>
+                            <button type="submit" th:if="${action == 'update'}" class="btn btn-primary" id="update">Update</button>
+                            <button onclick="document.location='/users'" class="btn btn-dark" data-btn="cancel">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<th:block layout:fragment="script">
+    <script th:src="@{/js/pages/user/create-update.js}"></script>
+    <script type="text/javascript" th:inline="javascript">
+        /*<![CDATA[*/
+        let action = /*[[${action}]]*/ 'action';
+        let user = /*[[${user}]]*/ 'user';
+        let userId = /*[[${userId}]]*/ 'userId';
+        /*]]>*/
+    </script>
+</th:block>
+</body>
+</html>

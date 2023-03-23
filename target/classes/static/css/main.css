@@ -1,0 +1,74 @@
+body{
+    font-family: "Arial";
+}
+.topnav-right{
+    right: 0;
+    position: absolute;
+}
+.country-flag{
+    width: 45px;
+    height: 30px;
+    margin-right: 20px;
+    display: none; /* Not to be displayed until needed.*/
+}
+
+ /* Shipment Operation*/
+#slide-wrap,#slide-wrap1,#slide-wrap-container,#slide-wrap-container1 {
+    overflow: auto;
+}
+
+#inner-wrap,#inner-wrap1,#inner-wrap-container,#inner-wrap-container1 {
+    float:left;
+    margin-right:-30000px;/*Be safe with Opera's limited negative margin of 32695px     (-999em could cause problems with large font sizes)*/
+    padding-left:20px;
+    width: auto;
+}
+
+label.header-fields-label {
+    width: 233px!important;
+    margin: 0;
+}
+
+.form-control{
+    display: initial;
+}
+
+div.horizontal-fields input,
+div.horizontal-fields textarea,
+div.horizontal-fields select,
+div.horizontal-fields label {
+    width: auto;
+}
+
+/* Horizontal fields is the class which is not re-sizing it's with correctly */
+.horizontal-fields {
+    display: block;
+}
+
+.service-additional-fields {
+    display:inline-block;
+}
+
+/* add red * for .required class */
+.required:after {
+    content:"*";
+    font-weight: bolder;
+    color: red;
+}
+
+.table-body-font  {
+    font-size: min(1em, 8.25pt);
+    height: 23.5pt;
+    outline: 1pt black solid;
+}
+
+
+.border{
+    border: 5px;
+}
+
+
+table tr.page-break{
+  page-break-after:always;
+}
+

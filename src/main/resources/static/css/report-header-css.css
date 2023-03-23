@@ -1,0 +1,34 @@
+
+/*============media header for financial report================*/
+body{
+    font-size: 16px!important;
+}
+.header-font{
+    font-weight: bold;
+    font-size: 18px!important;
+}
+@media print {
+    /*@page {size: landscape}*/
+    .wrapper{
+        margin: 0;
+        padding: 0;
+    }
+    .btn-print{
+        display: none;
+    }
+    .marginTopPrint{
+        height: 100px!important;
+    }
+    .logo{
+        width: 10px!important;
+        height: 10px!important;
+        margin-top: -30px!important;
+        /*float: left;*/
+    }
+    .text-header{
+        margin-top: 0!important;
+        margin-left: 350px!important;
+        padding: 0;
+        /*float: right;*/
+    }
+}

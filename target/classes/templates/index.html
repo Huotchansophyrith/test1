@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link rel="SHORTCUT ICON" th:href="@{/img/icon.png}" />
+    <th:block th:replace="fragments/styles"></th:block>
+    <th:block layout:fragment="style"></th:block>
+    <title layout:title-pattern="$LAYOUT_TITLE"></title>
+    <meta name="ctx" th:content="${#httpServletRequest.getContextPath()}" />
+</head>
+<!--<body class="hold-transition skin-blue sidebar-mini">-->
+<body class="sidebar-mini layout-fixed">
+    <div class="wrapper">
+        <header class="main-header" th:replace="fragments/header"></header>
+        <aside th:replace="fragments/menu"></aside>
+        <div class="content-wrapper" layout:fragment="content"></div>
+        <footer class="main-footer" th:replace="fragments/footer"></footer>
+    </div>
+    <th:block th:replace="fragments/scripts"></th:block>
+    <th:block layout:fragment="script"></th:block>
+</body>
+</html>

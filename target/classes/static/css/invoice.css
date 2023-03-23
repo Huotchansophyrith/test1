@@ -1,0 +1,61 @@
+@media print {
+    .table thead th, .table-bordered tbody td, .table-bordered tbody th{
+        border: 1px solid black ;
+    }
+    .table-bordered {
+        border: none !important;
+    }
+    .body-table .hide-border-top{
+        border-top-style: hidden !important;
+    }
+    .body-table .hide-border-butom{
+        border-bottom-style: hidden !important;
+    }
+    .style-line-footer{
+        width: 50%;
+        background: black;
+    }
+    .hide-border-left{
+        border-left-style: hidden !important;
+    }
+}
+
+
+.table tr:first-child{
+    border: 1px solid !important;
+}
+
+.table td, .table th{
+    padding: 3px;
+}
+.hide-border-left{
+    border-left-style: hidden !important;
+}
+.hide-border-top{
+    border-top-style: hidden !important;
+}
+.hide-border-butom{
+    border-bottom-style: hidden !important;
+}
+.pd-bottom-25{
+    padding-bottom: 25px;
+}
+.title-inv-debit{
+    text-align: center;
+    font-weight: bold;
+    text-decoration-line: underline;
+}
+.title-inv-tax{
+    text-align: center;
+    font-weight: bold;
+}
+.table-bordered {
+    border: none;
+}
+.table thead th, .table-bordered tbody td, .table-bordered tbody th{
+    border: 1px solid black ;
+}
+.style-line-footer{
+    width: 50%;
+    background: black;
+}
